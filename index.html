@@ -1,59 +1,217 @@
- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080a13">
+    <meta name="description" content="Gasiram is an MCA student and Python full stack developer focused on Flask, MySQL, and thoughtful web experiences.">
+    <meta property="og:title" content="Gasiram | Python Full Stack Developer">
+    <meta property="og:description" content="Explore Gasiram's projects, technical focus, education, and contact details.">
+    <meta property="og:type" content="website">
+    <title>Gasiram | Python Full Stack Developer</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Gasiram, home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a class="nav-cta" href="#contact">Let’s talk <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <h2>My <span>Portfolio</span></h2>
+    <main id="main">
+        <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="status-dot"></span> MCA student · Open to opportunities</p>
+                <h1 id="hero-title">Hi, I’m <span class="gradient-text">Gasiram</span></h1>
+                <p class="hero-subtitle">Building Innovative Digital Experiences with Python.</p>
+                <p class="hero-role">I’m a <span class="typed-role" data-roles="Python Full Stack Developer|Flask Developer|MCA Student|Web Application Developer">Python Full Stack Developer</span><span class="typing-caret" aria-hidden="true"></span></p>
+                <p class="hero-description">I turn ideas into useful web applications with Python, Flask, and a thoughtful approach to the details that make software feel great to use.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="images/Gasiram resume.pdf (1).pdf" download>Download resume <i class="fa-solid fa-download" aria-hidden="true"></i></a>
+                    <a class="button button-secondary" href="#projects">View projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="button button-secondary" href="#contact">Hire Me <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="social-links" aria-label="Social links">
+                    <a href="https://github.com/gasiram53" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/gasiram" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="mailto:gasirampangi53@gmail.com" aria-label="Email Gasiram"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+                    <span class="social-caption">Find me around the web</span>
+                </div>
+            </div>
+            <div class="hero-visual reveal" aria-label="Profile portrait">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="portrait-frame">
+                    <img src="images/WhatsApp Image 2026-05-23 at 7.29.19 PM.jpeg" alt="Portrait of Gasiram" fetchpriority="high">
+                </div>
+                <div class="floating-chip chip-python"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</div>
+                <div class="floating-chip chip-flask"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Full stack</div>
+                <div class="hero-glow" aria-hidden="true"></div>
+            </div>
+            <a class="scroll-hint" href="#about"><span></span> Scroll to explore</a>
+        </section>
 
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <section class="section section-shell about-section" id="about" aria-labelledby="about-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">A little about me</p>
+                <h2 id="about-title">Curious by nature.<br><span class="gradient-text">Builder by choice.</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-copy glass-card reveal">
+                    <p class="lead">I’m Gasiram, an MCA student who enjoys turning complex problems into clear, practical software.</p>
+                    <p>My focus is full stack development with Python, Flask, and MySQL, supported by a strong interest in accessible, responsive web interfaces. I enjoy learning how each layer fits together—from a clean user experience to the logic and data behind it.</p>
+                    <p>Whether I’m building a management tool or refining a small interaction, I bring curiosity, persistence, and a problem-solving mindset to the work.</p>
+                    <a class="text-link" href="about.html">More about me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="about-facts reveal">
+                    <article class="fact-card glass-card"><span class="fact-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span><div><h3>Academic focus</h3><p>Master of Computer Applications (MCA) student</p></div></article>
+                    <article class="fact-card glass-card"><span class="fact-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><div><h3>Development focus</h3><p>Python, Flask, MySQL, and web application development</p></div></article>
+                    <article class="fact-card glass-card"><span class="fact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h3>Based in</h3><p>Visakhapatnam, Andhra Pradesh, India</p></div></article>
+                </div>
+            </div>
+        </section>
 
-<section class="hero">
+        <section class="section section-shell skills-section" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading section-heading-centered reveal">
+                <p class="eyebrow">Tools of the trade</p>
+                <h2 id="skills-title">My technical <span class="gradient-text">toolkit</span></h2>
+                <p class="section-intro">Technologies I work with and continue to grow through hands-on practice.</p>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card glass-card reveal"><span class="skill-icon python"><i class="fa-brands fa-python" aria-hidden="true"></i></span><h3>Python</h3><p>Backend & scripting</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon flask"><i class="fa-solid fa-flask" aria-hidden="true"></i></span><h3>Flask</h3><p>Web applications</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon mysql"><i class="fa-solid fa-database" aria-hidden="true"></i></span><h3>MySQL</h3><p>Relational data</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon html"><i class="fa-brands fa-html5" aria-hidden="true"></i></span><h3>HTML5</h3><p>Accessible structure</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon css"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span><h3>CSS3</h3><p>Responsive interfaces</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon javascript"><i class="fa-brands fa-js" aria-hidden="true"></i></span><h3>JavaScript</h3><p>Interactive experiences</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon git"><i class="fa-brands fa-github" aria-hidden="true"></i></span><h3>Git &amp; GitHub</h3><p>Version control</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+                <article class="skill-card glass-card reveal"><span class="skill-icon responsive"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span><h3>Responsive design</h3><p>Mobile-first layouts</p><div class="skill-meter" aria-hidden="true"><span></span></div></article>
+            </div>
+            <p class="skills-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Indicators are visual accents, not self-rated proficiency scores.</p>
+            <a class="text-link centered-link" href="skills.html">Explore all skills <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </section>
 
-    <div class="hero-text">
-        <h3>Hello, I'm</h3>
+        <section class="section section-shell projects-section" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Selected work</p>
+                <h2 id="projects-title">Ideas turned into <span class="gradient-text">projects.</span></h2>
+                <p class="section-intro">A selection of management and web application projects. Repository and live demo links will appear when available.</p>
+            </div>
+            <div class="project-filters reveal" role="group" aria-label="Filter projects">
+                <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+                <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web apps</button>
+                <button class="filter-button" type="button" data-filter="management" aria-pressed="false">Management systems</button>
+                <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data</button>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card glass-card reveal" data-category="management">
+                    <div class="project-preview hospital-preview"><img src="images/hospital (2).jpeg" alt="City Care Hospital website preview" loading="lazy"><span class="project-index">01</span></div>
+                    <div class="project-body"><p class="project-type">Management system</p><h3>City Care Hospital Management System</h3><p>A hospital management project focused on organizing core healthcare workflows.</p><div class="tag-list"><span>Python</span><span>Management</span></div><div class="project-actions"><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div></div>
+                </article>
+                <article class="project-card glass-card reveal" data-category="web">
+                    <div class="project-preview pixora-preview" role="img" aria-label="Illustrative Pixora project preview"><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i><span>pixora / feed</span></div><div class="mock-post"><div class="mock-avatar"></div><div class="mock-lines"><i></i><i></i></div><div class="mock-image"></div><div class="mock-controls"><i></i><i></i><i></i></div></div></div><span class="project-index">02</span></div>
+                    <div class="project-body"><p class="project-type">Social application</p><h3>Pixora — Social Media Application</h3><p>A Flask and MySQL social-sharing MVP for creating and sharing content.</p><div class="tag-list"><span>Flask</span><span>MySQL</span></div><div class="project-actions"><a class="button button-small button-secondary" href="https://github.com/gasiram53/hello_pixora" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a><button class="button button-small button-muted" type="button" disabled title="No hosted demo is available">Live Demo</button></div></div>
+                </article>
+                <article class="project-card glass-card reveal" data-category="management">
+                    <div class="project-preview library-preview" role="img" aria-label="Illustrative digital library project preview"><div class="library-ui"><span class="library-sidebar"></span><span class="library-book book-one"></span><span class="library-book book-two"></span><span class="library-book book-three"></span><span class="library-row"></span><span class="library-row"></span></div><span class="project-index">03</span></div>
+                    <div class="project-body"><p class="project-type">Management system</p><h3>Digital Library Management System</h3><p>A library management project for keeping digital resources and lending activity organized.</p><div class="tag-list"><span>Details pending</span></div><div class="project-actions"><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div></div>
+                </article>
+                <article class="project-card glass-card reveal" data-category="management">
+                    <div class="project-preview attendance-preview" role="img" aria-label="Illustrative student attendance project preview"><div class="attendance-ui"><div class="attendance-heading"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i><span></span></div><div class="attendance-stat"><i></i><i></i><i></i></div><div class="attendance-table"><i></i><i></i><i></i><i></i></div></div><span class="project-index">04</span></div>
+                    <div class="project-body"><p class="project-type">Management system</p><h3>Student Attendance Management System</h3><p>A student-focused system concept for managing attendance records and summaries.</p><div class="tag-list"><span>Details pending</span></div><div class="project-actions"><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div></div>
+                </article>
+                <article class="project-card glass-card reveal" data-category="web">
+                    <div class="project-preview ecommerce-preview"><img src="images/ec.jpeg" alt="E-commerce website preview" loading="lazy"><span class="project-index">05</span></div>
+                    <div class="project-body"><p class="project-type">Web application</p><h3>E-Commerce Website</h3><p>A shopping website built using HTML, CSS, and JavaScript.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-actions"><a class="button button-small button-secondary" href="images/ec.jpeg">View preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><span class="button button-small button-muted" aria-disabled="true" title="Live demo link not provided">Live demo unavailable</span></div></div>
+                </article>
+                <article class="project-card glass-card reveal" data-category="data">
+                    <div class="project-preview sports-preview"><img src="images/WhatsApp Image 2026-08-10 at 6.42.38 PM.jpeg" alt="Sports data analysis project preview" loading="lazy"><span class="project-index">06</span></div>
+                    <div class="project-body"><p class="project-type">Data project</p><h3>Sports Data Analysis</h3><p>Cricket analytics using Python and NumPy.</p><div class="tag-list"><span>Python</span><span>NumPy</span><span>Analytics</span></div><div class="project-actions"><a class="button button-small button-secondary" href="images/WhatsApp Image 2026-08-10 at 6.42.38 PM.jpeg">View preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><span class="button button-small button-muted" aria-disabled="true" title="Live demo link not provided">Live demo unavailable</span></div></div>
+                </article>
+            </div>
+            <a class="text-link centered-link" href="projects.html">See project details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </section>
 
-        <h1>Your <span>Gasiram P</span></h1>
+        <section class="section section-shell education-section" id="education" aria-labelledby="education-title">
+            <div class="section-heading section-heading-centered reveal">
+                <p class="eyebrow">Learning journey</p>
+                <h2 id="education-title">Education &amp; <span class="gradient-text">growth.</span></h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline-item glass-card reveal">
+                    <span class="timeline-marker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                    <div><p class="timeline-label">Academic background</p><h3>Master of Computer Applications (MCA)</h3><p>Currently pursuing an MCA, building a foundation in computing while developing practical software projects.</p><span class="timeline-status"><i class="fa-solid fa-circle" aria-hidden="true"></i> In progress</span></div>
+                </article>
+                <article class="timeline-item glass-card reveal">
+                    <span class="timeline-marker"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
+                    <div><p class="timeline-label">Hands-on learning</p><h3>Learning by building</h3><p>Applying web development and Python skills through management systems, web applications, and data projects.</p><a class="text-link" href="#projects">Explore selected projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+            </div>
+        </section>
 
-        <h2>MCA Student | Python Developer</h2>
+        <section class="section section-shell achievements-section" id="experience" aria-labelledby="experience-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Beyond the code</p>
+                <h2 id="experience-title">Experience &amp; <span class="gradient-text">achievements.</span></h2>
+                <p class="section-intro">A snapshot of the verified foundations and project work shared so far.</p>
+            </div>
+            <div class="achievement-grid">
+                <article class="achievement-card glass-card reveal"><span class="achievement-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span><h3>Project-based practice</h3><p>Building and exploring web, management, and data applications as part of a growing development portfolio.</p></article>
+                <article class="achievement-card glass-card reveal"><span class="achievement-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span><h3>Problem-solving mindset</h3><p>Focused on understanding the problem, structuring a practical solution, and improving through iteration.</p></article>
+                <article class="achievement-card glass-card reveal"><span class="achievement-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span><h3>Continuous learning</h3><p>Strengthening full stack skills in parallel with MCA studies and hands-on software development.</p></article>
+            </div>
+            <p class="verification-note">No certifications, awards, or formal employment history were supplied, so none are claimed here.</p>
+        </section>
 
-        <p>
-            Passionate about coding, Web Development,
-            Artificial Intelligence and building
-            real-world projects.
-        </p>
+        <section class="section section-shell contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-panel glass-card reveal">
+                <div class="contact-copy">
+                    <p class="eyebrow">Have a project in mind?</p>
+                    <h2 id="contact-title">Let’s build something <span class="gradient-text">meaningful.</span></h2>
+                    <p>I’m happy to connect about opportunities, collaborations, or ideas. Send me a note and I’ll get back to you.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:gasirampangi53@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span><small>Email</small>gasirampangi53@gmail.com</span></a>
+                        <a href="mailto:gasirampangi@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span><small>Also listed</small>gasirampangi@gmail.com</span></a>
+                        <a href="tel:+919392342775"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><small>Phone</small>+91 9392342775</span></a>
+                    </div>
+                    <div class="social-links contact-socials">
+                        <a href="https://github.com/gasiram53" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/gasiram" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-contact-form>
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    <label for="contact-subject">Subject</label>
+                    <input id="contact-subject" name="subject" type="text" placeholder="What would you like to discuss?" required>
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Tell me a little about it..." required></textarea>
+                    <button class="button button-primary" type="submit">Compose email <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                    <p class="form-note" aria-live="polite">This form opens your email app; it does not send data to a server.</p>
+                </form>
+            </div>
+        </section>
+    </main>
 
-        <div class="buttons">
-            <a href="contact.html">Hire Me</a>
-            <a href="images/Gasiram resume.pdf (1).pdf" download>Download Resume</a>
-        </div>
-    </div>
-
-    <div class="hero-image">
-        <img src="images/WhatsApp Image 2026-05-23 at 7.29.19 PM.jpeg" alt="Profile">
-    </div>
-
-</section>
-
-<script src="script.js"></script>
-
+    <footer class="site-footer">
+        <a class="brand" href="#home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+        <p>Designed and built by Gasiram Pangi · <span id="current-year">2026</span></p>
+        <div class="footer-links"><a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="script.js" defer></script>
 </body>
 </html>

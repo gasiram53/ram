@@ -1,68 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - My Portfolio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080a13">
+    <meta name="description" content="Selected web, management, and data projects by Gasiram, an MCA student and Python full stack developer.">
+    <title>Projects | Gasiram</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-<header>
-    <nav>
-        <h2>My <span>Portfolio</span></h2>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="projects" id="projects">
-
-<h2>My <span>Projects</span></h2>
-
-<div class="project-box">
-
-<div class="project">
-<img src="images/ec.jpeg">
-<h3>E-Commerce Website</h3>
-<p>Shopping Website using HTML CSS JS.</p>
-<a href="images/ec.jpeg">View Project</a>
-</div>
-
-<div class="project">
-<img src="images/hospital (2).jpeg">
-<h3>Hospital Management</h3>
-<p>Hospital Management System using Python.</p>
-<a href="images/hospital (2).jpeg">View Project</a>
-</div>
-
-<div class="project">
-<img src="images/data logo.jpeg">
-<h3>Sports Data Analysis</h3>
-<p>Cricket Analytics using Python & NumPy.</p>
-<a href="images/WhatsApp Image 2026-08-10 at 6.42.38 PM.jpeg">View Project</a>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-    <p>© 2026 Gasiram Pangi | All Rights Reserved</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html#home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a class="nav-cta" href="index.html#contact">Let’s talk <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </nav>
+    </header>
+    <main id="main" class="subpage-main">
+        <section class="subpage-hero section-shell">
+            <p class="eyebrow">Selected work</p>
+            <h1>Ideas turned into <span class="gradient-text">projects.</span></h1>
+            <p>A collection of application, management, and data projects. Links are included only when a real destination is available.</p>
+        </section>
+        <section class="projects" id="projects">
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+                <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web apps</button>
+                <button class="filter-button" type="button" data-filter="management" aria-pressed="false">Management systems</button>
+                <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data</button>
+            </div>
+            <div class="project-box">
+                <article class="project project-card" data-category="management">
+                    <div class="project-preview"><img src="images/hospital (2).jpeg" alt="City Care Hospital website preview" loading="lazy"><span class="project-index">01</span></div>
+                    <p class="project-type">Management system</p>
+                    <h3>City Care Hospital Management System</h3>
+                    <p>Hospital Management System using Python, focused on organizing core healthcare workflows.</p>
+                    <div class="tag-list"><span>Python</span><span>Management</span></div>
+                    <div class="project-actions"><a class="button button-small button-secondary" href="images/hospital (2).jpeg">View preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div>
+                </article>
+                <article class="project project-card" data-category="web">
+                    <div class="project-preview pixora-preview" role="img" aria-label="Illustrative Pixora project preview"><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i><span>pixora / feed</span></div><div class="mock-post"><div class="mock-avatar"></div><div class="mock-lines"><i></i><i></i></div><div class="mock-image"></div><div class="mock-controls"><i></i><i></i><i></i></div></div></div><span class="project-index">02</span></div>
+                    <p class="project-type">Social application</p>
+                    <h3>Pixora — Social Media Application</h3>
+                    <p>A Flask and MySQL social-sharing MVP for creating and sharing content.</p>
+                    <div class="tag-list"><span>Flask</span><span>MySQL</span></div>
+                    <div class="project-actions"><a class="button button-small button-secondary" href="https://github.com/gasiram53/hello_pixora" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></a><button class="button button-small button-muted" type="button" disabled title="No hosted demo is available">Live Demo</button></div>
+                </article>
+                <article class="project project-card" data-category="management">
+                    <div class="project-preview library-preview" role="img" aria-label="Illustrative digital library project preview"><div class="library-ui"><span class="library-sidebar"></span><span class="library-book book-one"></span><span class="library-book book-two"></span><span class="library-book book-three"></span><span class="library-row"></span><span class="library-row"></span></div><span class="project-index">03</span></div>
+                    <p class="project-type">Management system</p>
+                    <h3>Digital Library Management System</h3>
+                    <p>A library management project for organizing digital resources and lending activity.</p>
+                    <div class="tag-list"><span>Details pending</span></div>
+                    <div class="project-actions"><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div>
+                </article>
+                <article class="project project-card" data-category="management">
+                    <div class="project-preview attendance-preview" role="img" aria-label="Illustrative student attendance project preview"><div class="attendance-ui"><div class="attendance-heading"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i><span></span></div><div class="attendance-stat"><i></i><i></i><i></i></div><div class="attendance-table"><i></i><i></i><i></i><i></i></div></div><span class="project-index">04</span></div>
+                    <p class="project-type">Management system</p>
+                    <h3>Student Attendance Management System</h3>
+                    <p>A student-focused project for managing attendance records and summaries.</p>
+                    <div class="tag-list"><span>Details pending</span></div>
+                    <div class="project-actions"><button class="button button-small button-muted" type="button" disabled title="Repository link not provided">GitHub</button><button class="button button-small button-muted" type="button" disabled title="Live demo link not provided">Live Demo</button></div>
+                </article>
+                <article class="project project-card" data-category="web">
+                    <div class="project-preview"><img src="images/ec.jpeg" alt="E-commerce website preview" loading="lazy"><span class="project-index">05</span></div>
+                    <p class="project-type">Web application</p>
+                    <h3>E-Commerce Website</h3>
+                    <p>Shopping Website using HTML CSS JS.</p>
+                    <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-actions"><a class="button button-small button-secondary" href="images/ec.jpeg">View preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><span class="button button-small button-muted" aria-disabled="true" title="Live demo link not provided">Live demo unavailable</span></div>
+                </article>
+                <article class="project project-card" data-category="data">
+                    <div class="project-preview"><img src="images/WhatsApp Image 2026-08-10 at 6.42.38 PM.jpeg" alt="Sports data analysis project preview" loading="lazy"><span class="project-index">06</span></div>
+                    <p class="project-type">Data project</p>
+                    <h3>Sports Data Analysis</h3>
+                    <p>Cricket Analytics using Python &amp; NumPy.</p>
+                    <div class="tag-list"><span>Python</span><span>NumPy</span><span>Analytics</span></div>
+                    <div class="project-actions"><a class="button button-small button-secondary" href="images/WhatsApp Image 2026-08-10 at 6.42.38 PM.jpeg">View preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><span class="button button-small button-muted" aria-disabled="true" title="Live demo link not provided">Live demo unavailable</span></div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <a class="brand" href="index.html#home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+        <p>© <span id="current-year">2026</span> Gasiram Pangi · All rights reserved</p>
+        <div class="footer-links"><a href="about.html">About</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="script.js" defer></script>
 </body>
 </html>

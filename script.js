@@ -1,94 +1,136 @@
-// Active Navigation
-const currentPage = window.location.pathname.split("/").pop();
+document.documentElement.classList.add("js");
 
-const navLinks = document.querySelectorAll("nav ul li a");
+const revealItems = document.querySelectorAll(".reveal, .card, .project");
 
-navLinks.forEach(link => {
-    const page = link.getAttribute("href");
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
 
-    if (page === currentPage || (currentPage === "" && page === "index.html")) {
-        link.classList.add("active");
-    }
-});
-
-// Smooth Fade Animation
-const cards = document.querySelectorAll(".card, .project");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
+    revealItems.forEach(item => {
+        item.classList.add("reveal");
+        revealObserver.observe(item);
     });
-}, {
-    threshold: 0.2
+} else {
+    revealItems.forEach(item => item.classList.add("is-visible"));
+}
+
+const typedRole = document.querySelector(".typed-role");
+
+if (typedRole) {
+    const roles = (typedRole.dataset.roles || "").split("|").filter(Boolean);
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (roles.length > 1 && !reducedMotion) {
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let deleting = true;
+
+        const typeNextCharacter = () => {
+            const role = roles[roleIndex];
+            characterIndex += deleting ? -1 : 1;
+            typedRole.textContent = role.slice(0, characterIndex);
+
+            if (deleting && characterIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                window.setTimeout(typeNextCharacter, 240);
+                return;
+            }
+
+            if (!deleting && characterIndex === roles[roleIndex].length) {
+                deleting = true;
+                window.setTimeout(typeNextCharacter, 1500);
+                return;
+            }
+
+            window.setTimeout(typeNextCharacter, deleting ? 38 : 65);
+        };
+
+        window.setTimeout(typeNextCharacter, 1200);
+    }
+}
+
+document.querySelectorAll("[data-filter]").forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        const projectCards = document.querySelectorAll(".project-card[data-category]");
+
+        document.querySelectorAll(".filter-button").forEach(filterButton => {
+            const isSelected = filterButton === button;
+            filterButton.classList.toggle("is-active", isSelected);
+            filterButton.setAttribute("aria-pressed", String(isSelected));
+        });
+
+        projectCards.forEach(card => {
+            card.hidden = filter !== "all" && card.dataset.category !== filter;
+        });
+    });
 });
 
-cards.forEach(card => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(40px)";
-    card.style.transition = "0.6s ease";
-    observer.observe(card);
-});
+const contactForm = document.querySelector("[data-contact-form]");
 
-// Contact Form
-const form = document.querySelector("form");
+if (contactForm) {
+    contactForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-if (form) {
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+        if (!contactForm.reportValidity()) {
+            return;
+        }
 
-        alert("Thank you! Your message has been sent.");
+        const formData = new FormData(contactForm);
+        const subject = encodeURIComponent(formData.get("subject").toString());
+        const body = encodeURIComponent(
+            `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`
+        );
 
-        form.reset();
+        window.location.href = `mailto:gasirampangi53@gmail.com?subject=${subject}&body=${body}`;
     });
 }
 
-// Button Hover Effect
-const buttons = document.querySelectorAll(".buttons a");
+const backToTop = document.querySelector(".back-to-top");
 
-buttons.forEach(button => {
-    button.addEventListener("mouseover", () => {
-        button.style.transform = "scale(1.05)";
+if (backToTop) {
+    const updateBackToTop = () => {
+        backToTop.classList.toggle("is-visible", window.scrollY > 420);
+    };
+
+    window.addEventListener("scroll", updateBackToTop, { passive: true });
+    updateBackToTop();
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
+}
 
-    button.addEventListener("mouseout", () => {
-        button.style.transform = "scale(1)";
-    });
-});
+const yearElement = document.querySelector("#current-year");
 
-// Scroll to Top Button
-const topBtn = document.createElement("button");
+if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+}
 
-topBtn.innerHTML = "↑";
-topBtn.id = "topBtn";
+const currentPage = window.location.pathname.split("/").pop();
 
-document.body.appendChild(topBtn);
+document.querySelectorAll(".nav-links a").forEach(link => {
+    const href = link.getAttribute("href");
+    const section = href && href.startsWith("#") ? document.querySelector(href) : null;
 
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "20px";
-topBtn.style.right = "20px";
-topBtn.style.padding = "10px 15px";
-topBtn.style.fontSize = "18px";
-topBtn.style.background = "#2ecc71";
-topBtn.style.color = "#fff";
-topBtn.style.border = "none";
-topBtn.style.borderRadius = "50%";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
+    if (href === `${currentPage}#${currentPage}` || (currentPage === "" && href === "#home")) {
+        link.setAttribute("aria-current", "page");
     }
-});
 
-topBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    if (section && "IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                document.querySelectorAll(".nav-links a").forEach(navLink => navLink.removeAttribute("aria-current"));
+                link.setAttribute("aria-current", "location");
+            }
+        }, { rootMargin: "-30% 0px -60% 0px" });
+        sectionObserver.observe(section);
+    }
 });

@@ -1,91 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Portfolio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080a13">
+    <meta name="description" content="Contact Gasiram about software development opportunities, collaborations, and project ideas.">
+    <title>Contact Gasiram | Python Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-<header>
-    <nav>
-        <h2>My <span>Portfolio</span></h2>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="contact">
-
-    <h2>Contact <span>Me</span></h2>
-
-    <div class="contact-container">
-
-        <form>
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Your Email" required>
-
-            <input type="text" placeholder="Subject">
-
-            <textarea rows="6" placeholder="Your Message"></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
-
-        <div class="contact-info">
-
-            <h3>Get in Touch</h3>
-
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                gasirampangi53@gmail.com
-            </p>
-
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                +91 9392342775
-            </p>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Andhra Pradesh, India
-            </p>
-
-            <p>
-                <i class="fa-brands fa-github"></i>
-                github.com/gasiram53
-            </p>
-
-            <p>
-                <i class="fa-brands fa-linkedin"></i>
-                linkedin.com/in/gasiram
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2026 Gasiram Pangi | All Rights Reserved</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html#home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a class="nav-cta" href="index.html#contact">Let’s talk <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </nav>
+    </header>
+    <main id="main" class="subpage-main">
+        <section class="subpage-hero section-shell">
+            <p class="eyebrow">Get in touch</p>
+            <h1>Let’s start a <span class="gradient-text">conversation.</span></h1>
+            <p>For opportunities, collaborations, or a good idea that needs building, send a note.</p>
+        </section>
+        <section class="contact">
+            <div class="contact-container">
+                <form data-contact-form>
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    <label for="contact-subject">Subject</label>
+                    <input id="contact-subject" name="subject" type="text" placeholder="What would you like to discuss?" required>
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="6" placeholder="Your message" required></textarea>
+                    <button class="button button-primary" type="submit">Compose email <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                    <p class="form-note" aria-live="polite">This form opens your email app; it does not send data to a server.</p>
+                </form>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:gasirampangi53@gmail.com">gasirampangi53@gmail.com</a></p>
+                    <p><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:gasirampangi@gmail.com">gasirampangi@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+919392342775">+91 9392342775</a></p>
+                    <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Andhra Pradesh, India</p>
+                    <p><i class="fa-brands fa-github" aria-hidden="true"></i><a href="https://github.com/gasiram53" target="_blank" rel="noopener noreferrer">github.com/gasiram53</a></p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/gasiram" target="_blank" rel="noopener noreferrer">linkedin.com/in/gasiram</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <a class="brand" href="index.html#home"><span class="brand-mark">G</span>gasiram<span class="brand-dot">.</span></a>
+        <p>© <span id="current-year">2026</span> Gasiram Pangi · All rights reserved</p>
+        <div class="footer-links"><a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a></div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="script.js" defer></script>
 </body>
 </html>
